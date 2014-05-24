@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <ImageButton
+        android:id="@+id/imn1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/number1" />
+
+    <ImageButton
+        android:id="@+id/imn2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@id/imn1"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@id/imn1"
+        android:background="@drawable/number2" />
+
+    <ImageButton
+        android:id="@+id/imn2lock"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@id/imn1"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@id/imn1"
+        android:background="@drawable/lock" />
+
+    <ImageButton
+        android:id="@+id/imn3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@id/imn1"
+        android:layout_below="@id/imn1"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/number3" />
+
+    <ImageButton
+        android:id="@+id/imn3lock"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@id/imn1"
+        android:layout_below="@id/imn1"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/lock" />
+
+    <ImageButton
+        android:id="@+id/imn4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@id/imn2"
+        android:layout_below="@id/imn2"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/number4" />
+
+    <ImageButton
+        android:id="@+id/imn4lock"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@id/imn2"
+        android:layout_below="@id/imn2"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/lock" />
+
+    <ImageButton
+        android:id="@+id/imn5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@id/imn3"
+        android:layout_below="@id/imn3"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/number5" />
+
+    <ImageButton
+        android:id="@+id/imn5lock"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@id/imn3"
+        android:layout_below="@id/imn3"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/lock" />
+    
+    <ImageButton
+        android:id="@+id/imn6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@id/imn4"
+        android:layout_below="@id/imn4"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/number6" />
+
+    <ImageButton
+        android:id="@+id/imn6lock"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@id/imn4"
+        android:layout_below="@id/imn4"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/lock" />
+
+
+
+</RelativeLayout>

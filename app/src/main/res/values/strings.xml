@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, RealballActivity!</string>
+    <string name="app_name">Real ball</string>
+    <string name="enter_username">Please Enter the Username</string>
+    <string name="login_title">Welcome to the world of solving misconception</string>
+    <string name="enter_password">Please Enter the Password</string>
+    <string name="Login">Login</string>
+    <string name="Create">Create</string>
+    <string name="create_new">Create New User</string>
+    <string name="exit">Exit</string>
+    <string name="login">Login</string>
+    <string name="enter_passwd">Enter Password</string>
+    <string name="username">Username</string>
+    <string name="passwd">Password</string>
+    <string name="confirm_passwd">Confirm Password</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+    <string name="person_info">Person Information</string>
+    <string name="description">
+        Welcome to Real Ball!\n
+        The ball is controlled by tilting the phone.\n
+		\n
+		To begin a level, click level select from the main menu, then choose from the levels you have unlocked. 
+		To unlock a new level, you must beat the level before it.\n
+		\n
+		You can also start a free style level in which there is no goal. Press back to end the level.\n
+		\n
+		After completing a level you can see the graph of your speed and velocity over time.
+		Also, clicking check graph in the main menu will allow you to see your last graph.\n
+		\n
+		Levels 4,5, and 6 are wind levels in which your ball is accelerated by the wind. 
+		In order to get wind speed data, go to options and enter your zip code. Otherwise, a default value will be used.\n
+		\n
+		You may also select options from the main menu to turn on or off the music.\n
+		\n
+		Press the quit button to exit the game.\n
+        
+    </string>
+
+</resources>

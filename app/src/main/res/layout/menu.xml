@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+	<Button
+	    android:id="@+id/BlevelSelect"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="80dp"
+	    android:textStyle="bold"
+	    android:textSize="25dp"
+		android:text="Level Select"
+	/>
+	<Button
+	    android:id="@+id/BfreeStyle"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:textStyle="bold"
+	    android:textSize="25dp"
+		android:text="Free Style"
+	/>
+	<Button
+	    android:id="@+id/Boption"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:textStyle="bold"
+	    android:textSize="25dp"
+		android:text="Option"
+	/>
+	<Button
+	    android:id="@+id/BcheckGragh"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:textStyle="bold"
+	    android:textSize="25dp"
+		android:text="Check Graph"
+	/>
+	<Button
+	    android:id="@+id/Bhelp"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:textStyle="bold"
+	    android:textSize="25dp"
+		android:text="Help"
+	/>
+	<Button
+	    android:id="@+id/Bquit"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:textStyle="bold"
+	    android:textSize="25dp"
+		android:text="Quit"
+	/>
+	
+</LinearLayout>

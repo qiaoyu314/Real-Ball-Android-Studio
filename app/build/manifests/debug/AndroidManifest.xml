@@ -1,0 +1,105 @@
+<!-- From: file:/Users/Vinky/Developer/Real%20Ball%20Android%20Studio/app/src/main/AndroidManifest.xml --><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.realBall">
+
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="10"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> 
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:label="@string/app_name" android:name="com.realBall.splash" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.Login" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.realBall.LOGIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.CreateAccount" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.realBall.CREATEACCOUNT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.MenuList" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.realBall.MENULIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.Help" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.realBall.HELP"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.SelectLevel" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.realBall.SELECTLEVEL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.Option" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.realBall.OPTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.LevelOne" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.realBall.LEVELONE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.LevelTwo" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.realBall.LEVELTWO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.LevelThree">&gt;
+            <intent-filter>
+                <action android:name="com.realBall.LEVELTHREE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.LevelFour" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.realBall.LEVELFOUR"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.LevelFive" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.realBall.LEVELFIVE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.LevelSix" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.realBall.LEVELSIX"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.LevelSeven" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.realBall.LEVELSEVEN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.ShowGraph" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.realBall.SHOWGRAPH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.realBall.FreeStyleLevel" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.realBall.FREESTYLELEVEL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
