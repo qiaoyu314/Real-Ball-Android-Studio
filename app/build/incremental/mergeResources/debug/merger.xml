@@ -151,9 +151,9 @@
             <file
                 path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/values/color.xml"
                 qualifiers="" >
-                <color name="splash" >#ea69a2
-                </color>
                 <color name="background" >#ffff00
+                </color>
+                <color name="splash" >#ea69a2
                 </color>
                 <color name="black" >#000000
                 </color>
@@ -214,6 +214,16 @@
                 <string name="create_new" >Create New User
                 </string>
             </file>
+            <file
+                name="arrow_green"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/arrow_green.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="arrow_red"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/arrow_red.png"
+                qualifiers="hdpi"
+                type="drawable" />
         </source>
         <source path="/Users/Vinky/Developer/Real Ball Android Studio/app/build/res/rs/debug" />
         <source path="/Users/Vinky/Developer/Real Ball Android Studio/app/build/res/generated/debug" />

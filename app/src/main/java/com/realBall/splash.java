@@ -28,10 +28,10 @@ public class splash extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.splash);
 		ImageView title = (ImageView) findViewById(R.id.ivRB);
-		//load the animation
-		Animation animation = (AnimationSet) AnimationUtils.loadAnimation(this, R.anim.anim);
+		/* load the animation */
+		Animation animation = AnimationUtils.loadAnimation(this, R.anim.anim);
 		title.setAnimation(animation);
-		//start the animation
+		/* start the animation */
 		animation.start();
 		
 		//create a new thread to count the time
@@ -48,7 +48,7 @@ public class splash extends Activity{
                     // do nothing
                 } finally {
                     finish();
-                    startActivity(new Intent("com.realBall.LOGIN"));
+                    startActivity(new Intent("com.realBall.MENULIST"));
                 }
             }
         };

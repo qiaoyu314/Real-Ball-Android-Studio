@@ -34,11 +34,11 @@ public class GraphView {
         }
 
         //build line
-        GraphViewSeries.GraphViewSeriesStyle blue = new GraphViewSeriesStyle();
-        blue.color = Color.BLUE;
+        GraphViewSeries.GraphViewSeriesStyle green = new GraphViewSeriesStyle();
+        green.color = Color.GREEN;
         GraphViewSeries.GraphViewSeriesStyle red = new GraphViewSeriesStyle();
         red.color = Color.RED;
-        GraphViewSeries vLine = new GraphViewSeries("Velocity-Time",blue, vData);
+        GraphViewSeries vLine = new GraphViewSeries("Velocity-Time",green, vData);
         GraphViewSeries aLine = new GraphViewSeries("Acceleration-Time", red, aData);
 
         //draw

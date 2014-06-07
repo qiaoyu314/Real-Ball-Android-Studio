@@ -1,11 +1,6 @@
 package com.realBall;
 
 import java.util.ArrayList;
-
-import com.realBall.R;
-
-
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -16,6 +11,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.BitmapFactory.Options;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -36,7 +32,13 @@ import android.view.WindowManager;
  *
  */
 public class LevelOne extends Activity {
-	public Boolean firstTime = true;
+	protected int SCREEN_WIDTH;
+    protected int SCREEN_HEIGHT;
+    protected int DENSITY;
+    private int arrowSize;
+
+
+    public Boolean firstTime = true;
 	private SimulationView mSimulationView;
 	private SensorManager mSensorManager;
 	private WindowManager mWindowManager;
@@ -56,6 +58,14 @@ public class LevelOne extends Activity {
 		// Clear the points to start the graph fresh
 		LevelOne.velocityList.clear();
 		LevelOne.accelerationList.clear();
+
+        //get the screen size
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        SCREEN_HEIGHT = metrics.heightPixels;
+        SCREEN_WIDTH = metrics.widthPixels;
+        DENSITY = metrics.densityDpi;
+        arrowSize = (int)(SCREEN_WIDTH * 0.15);
 
 		// Get an instance of the SensorManager
 		mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -147,8 +157,10 @@ public class LevelOne extends Activity {
 		private float mYDpi;
 		private float mMetersToPixelsX;
 		private float mMetersToPixelsY;
-		private Bitmap mBitmap;
+		private Bitmap ballBitMap;
 		private Bitmap mRoad;
+        private Bitmap redArrow;
+        private Bitmap greenArrow;
 		private float mXOrigin;
 		private float mYOrigin;
 		private float mSensorX;
@@ -436,31 +448,45 @@ public class LevelOne extends Activity {
 			mMetersToPixelsY = mYDpi / 0.0254f;
 
 			// rescale the ball so it's about 0.5 cm on screen
-			Bitmap ball = BitmapFactory.decodeResource(getResources(),
+			ballBitMap = BitmapFactory.decodeResource(getResources(),
 					R.drawable.ball);
-			final int dstWidth = (int) (50);
-			final int dstHeight = (int) (50);
-			mBitmap = Bitmap
-					.createScaledBitmap(ball, dstWidth, dstHeight, true);
+			final int dstWidth = 50;
+			final int dstHeight = 50;
+			ballBitMap = Bitmap
+					.createScaledBitmap(ballBitMap, dstWidth, dstHeight, true);
 
 			Options opts = new Options();
 			opts.inDither = true;
 			opts.inPreferredConfig = Bitmap.Config.RGB_565;
 			mRoad = BitmapFactory.decodeResource(getResources(),
-					R.drawable.road, opts);
+					R.drawable.wood, opts);
+            mRoad = Bitmap.createScaledBitmap(mRoad,SCREEN_WIDTH,SCREEN_HEIGHT,true);
+
+            redArrow = BitmapFactory.decodeResource(getResources(), R.drawable.arrow_red);
+            redArrow = Bitmap.createScaledBitmap(redArrow, arrowSize, arrowSize, true);
+
+            greenArrow = BitmapFactory.decodeResource(getResources(), R.drawable.arrow_green);
+            greenArrow = Bitmap.createScaledBitmap(greenArrow,arrowSize, arrowSize, true);
+
 		}
+
 
 		@Override
 		protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 			// compute the origin of the screen relative to the origin of
 			// the bitmap
-			mXOrigin = (w - mBitmap.getWidth()) * 0.5f;
-			mYOrigin = (h - mBitmap.getHeight()) * 0.5f;
+			mXOrigin = (w - ballBitMap.getWidth()) * 0.5f;
+			mYOrigin = (h - ballBitMap.getHeight()) * 0.5f;
 			mHorizontalBound = ((w / mMetersToPixelsX - sBallDiameter) * 0.5f);
 			mVerticalBound = ((h / mMetersToPixelsY - sBallDiameter) * 0.5f);
 		}
 
-		@Override
+        @Override
+        public void onAccuracyChanged(Sensor sensor, int i) {
+
+        }
+
+        @Override
 		public void onSensorChanged(SensorEvent event) {
 			try {
 				Thread.sleep(20);
@@ -520,21 +546,32 @@ public class LevelOne extends Activity {
 			
 			Paint paint = new Paint();
 			//set some property of paint
-			paint.setColor(Color.RED);
-			paint.setTextSize(30);
-			paint.setStrokeWidth(5);
+			paint.setColor(Color.WHITE);
+            int textSize = (int)(DENSITY * 0.3);
+			paint.setTextSize(textSize);
+			paint.setStrokeWidth(10);
 			//round the value to 2 decimal digits
 			float disvelocity = (float)Math.round(velocity * 1000) / 10;
 			float disAccel = (float)Math.round(acceleration * 1000) / 10;
+
+            //draw round rect
+            //canvas.drawRoundRect();
+
 			//draw text
-			canvas.drawText("Velocity", 70, 30, paint);
-			canvas.drawText(Float.toString(disvelocity)+" m/s", 70, 70, paint);
-			canvas.drawText("Acceleration", 280, 30, paint);
-			canvas.drawText(Float.toString(disAccel)+" m/s^2", 300, 70, paint);
-			paint.setColor(Color.BLACK);
-			paint.setTextSize(40);
-			canvas.drawText(Long.toString(timeRemaining), 220, 50, paint);
-			
+//			canvas.drawText("Velocity", SCREEN_WIDTH*0.1f, SCREEN_HEIGHT*0.03f, paint);
+//			canvas.drawText(Float.toString(disvelocity)+" m/s", 70, 70, paint);
+//			canvas.drawText("Acceleration", SCREEN_WIDTH*0.9f - 5*textSize, SCREEN_HEIGHT*0.03f, paint);
+//			canvas.drawText(Float.toString(disAccel)+" m/s^2", 300, 70, paint);
+
+
+			paint.setColor(Color.WHITE);
+			paint.setTextSize(textSize);
+            String timeText = timeRemaining<10?"0"+String.valueOf(timeRemaining):String.valueOf(timeRemaining);
+            float ascent = -paint.ascent();
+			canvas.drawText(timeText, SCREEN_WIDTH/2 - textSize/2, ascent, paint);
+
+            //test arrow bitmap
+            float arrowMargin = SCREEN_WIDTH * 0.1f;
 
 			
 			/*
@@ -542,15 +579,15 @@ public class LevelOne extends Activity {
 			 */
 			paint.setColor(Color.RED);
 			if(velocity>0)
-				upArrow(20, 10, paint, canvas);
+                upRedArrow(redArrow, arrowMargin, arrowSize, canvas);
 			else if(velocity<0){
-				downArrow(20, 10, paint, canvas);
+				downRedArrow(redArrow, arrowMargin, arrowSize, canvas);
 			}
 			if(acceleration>0){
-				upArrow(470, 10, paint, canvas);
+				upGreenArrow(greenArrow, arrowMargin, arrowSize, canvas);
 			}
 			else if(acceleration<0){
-				downArrow(470, 10, paint, canvas);
+				downGreenArrow(greenArrow, arrowMargin, arrowSize, canvas);
 			}
 			/*
 			 * compute the new position of our object, based on accelerometer
@@ -569,7 +606,7 @@ public class LevelOne extends Activity {
 			final float yc = mYOrigin;
 			final float xs = mMetersToPixelsX;
 			final float ys = mMetersToPixelsY;
-			final Bitmap bitmap = mBitmap;
+			final Bitmap bitmap = ballBitMap;
 			final int count = particleSystem.getParticleCount();
 			for (int i = 0; i < count; i++) {
 				/*
@@ -583,23 +620,32 @@ public class LevelOne extends Activity {
 				canvas.drawBitmap(bitmap, x, y, null);
 			}
 		}
-		private void upArrow(float x, float y, Paint paint, Canvas canvas){
-			paint.setStrokeWidth(2);
-			canvas.drawLine(x, y, x, y+50, paint);
-			canvas.drawLine(x, y, x-10, y+10, paint);
-			canvas.drawLine(x, y, x+10, y+10, paint);
+		private void upRedArrow(Bitmap arrow, float arrowMargin, int size, Canvas canvas){
+            //original arrow is down
+            Matrix matrix = new Matrix();
+            matrix.preRotate(180);
+            arrow = Bitmap.createBitmap(arrow,0, 0, arrowSize, size, matrix, true);
+            canvas.drawBitmap(arrow,arrowMargin, 0, null);
 			
 		}
-		private void downArrow(float x, float y, Paint paint, Canvas canvas){
-			paint.setStrokeWidth(2);
-			canvas.drawLine(x, y+50, x-10, y+40, paint);
-			canvas.drawLine(x, y+50, x+10, y+40, paint);
-			canvas.drawLine(x, y, x, y+50, paint);
+		private void downRedArrow(Bitmap arrow, float arrowMargin, int size, Canvas canvas){
+            //original arrow is down
+            canvas.drawBitmap(arrow, arrowMargin, 0, null);
 		}
 
-		@Override
-		public void onAccuracyChanged(Sensor sensor, int accuracy) {
-		}
+        private void downGreenArrow(Bitmap arrow, float arrowMargin, int size, Canvas canvas){
+            //original arrow is down
+            Matrix matrix = new Matrix();
+            matrix.preRotate(180);
+            arrow = Bitmap.createBitmap(arrow,0, 0, arrowSize, arrowSize, matrix, true);
+            canvas.drawBitmap(arrow,SCREEN_WIDTH - size - arrowMargin, 0, null);
+
+        }
+        private void upGreenArrow(Bitmap arrow, float arrowMargin, int size, Canvas canvas){
+            //original arrow is up
+            canvas.drawBitmap(arrow, SCREEN_WIDTH - size - arrowMargin, 0, null);
+        }
+
 	}
 
 	public void finishLevel() {
