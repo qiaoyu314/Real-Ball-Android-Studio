@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res" >
+            <file
+                name="anim"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/anim/anim.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="arrow_green"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/arrow_green.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="arrow_red"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/arrow_red.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="background"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/background.jpg"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ball"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/ball.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="car"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/car.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="icon"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/icon.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="lock"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/lock.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="logo"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/logo.gif"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="menu"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/menu.jpg"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="number1"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/number1.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="number2"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/number2.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="number3"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/number3.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="number4"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/number4.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="number5"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/number5.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="number6"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/number6.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="road"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/road.jpg"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="splash"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/splash.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="wood"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-hdpi/wood.jpg"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-ldpi/ic_launcher.png"
+                qualifiers="ldpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-mdpi/ic_launcher.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="create_account"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/layout/create_account.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="help"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/layout/help.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="login"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/layout/login.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="menu"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/layout/menu.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="option"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/layout/option.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="select_level"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/layout/select_level.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="splash"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/layout/splash.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="game"
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/raw/game.mp3"
+                qualifiers=""
+                type="raw" />
+            <file
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/values/color.xml"
+                qualifiers="" >
+                <color name="splash" >#ea69a2
+                </color>
+                <color name="background" >#ffff00
+                </color>
+                <color name="black" >#000000
+                </color>
+            </file>
+            <file
+                path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/main/res/values/strings.xml"
+                qualifiers="" >
+                <string name="person_info" >Person Information
+                </string>
+                <string name="done" >Done
+                </string>
+                <string name="description" >        Welcome to Real Ball!\n
+        The ball is controlled by tilting the phone.\n
+		\n
+		To begin a level, click level select from the main menu, then choose from the levels you have unlocked. 
+		To unlock a new level, you must beat the level before it.\n
+		\n
+		You can also start a free style level in which there is no goal. Press back to end the level.\n
+		\n
+		After completing a level you can see the graph of your speed and velocity over time.
+		Also, clicking check graph in the main menu will allow you to see your last graph.\n
+		\n
+		Levels 4,5, and 6 are wind levels in which your ball is accelerated by the wind. 
+		In order to get wind speed data, go to options and enter your zip code. Otherwise, a default value will be used.\n
+		\n
+		You may also select options from the main menu to turn on or off the music.\n
+		\n
+		Press the quit button to exit the game.\n
+                </string>
+                <string name="login_title" >Welcome to the world of solving misconception
+                </string>
+                <string name="enter_password" >Please Enter the Password
+                </string>
+                <string name="hello" >Hello World, RealballActivity!
+                </string>
+                <string name="enter_passwd" >Enter Password
+                </string>
+                <string name="cancel" >Cancel
+                </string>
+                <string name="enter_username" >Please Enter the Username
+                </string>
+                <string name="exit" >Exit
+                </string>
+                <string name="Login" >Login
+                </string>
+                <string name="Create" >Create
+                </string>
+                <string name="passwd" >Password
+                </string>
+                <string name="app_name" >Real ball
+                </string>
+                <string name="username" >Username
+                </string>
+                <string name="login" >Login
+                </string>
+                <string name="confirm_passwd" >Confirm Password
+                </string>
+                <string name="create_new" >Create New User
+                </string>
+            </file>
+        </source>
+        <source path="/Users/Vinky/Developer/Real Ball Android Studio/app/build/generated/res/rs/debug" />
+        <source path="/Users/Vinky/Developer/Real Ball Android Studio/app/build/generated/res/generated/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/Vinky/Developer/Real Ball Android Studio/app/src/debug/res" />
+    </dataSet>
+
+</merger>

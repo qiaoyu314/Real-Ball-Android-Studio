@@ -13,6 +13,7 @@ import android.graphics.BitmapFactory.Options;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.RectF;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -549,10 +550,10 @@ public class LevelOne extends Activity {
 			paint.setColor(Color.WHITE);
             int textSize = (int)(DENSITY * 0.3);
 			paint.setTextSize(textSize);
-			paint.setStrokeWidth(10);
+
 			//round the value to 2 decimal digits
-			float disvelocity = (float)Math.round(velocity * 1000) / 10;
-			float disAccel = (float)Math.round(acceleration * 1000) / 10;
+			//float disvelocity = (float)Math.round(velocity * 1000) / 10;
+			//float disAccel = (float)Math.round(acceleration * 1000) / 10;
 
             //draw round rect
             //canvas.drawRoundRect();
@@ -573,21 +574,28 @@ public class LevelOne extends Activity {
             //test arrow bitmap
             float arrowMargin = SCREEN_WIDTH * 0.1f;
 
+            //draw a rectangle
+            float strokeWidth = DENSITY/20;
+            paint.setStrokeWidth(strokeWidth);
+            paint.setStyle(Paint.Style.STROKE);
+            RectF regBox = new RectF(SCREEN_WIDTH*0.05f, strokeWidth/2, SCREEN_WIDTH*0.95f, arrowSize+strokeWidth);
+            canvas.drawRoundRect(regBox, 50, 50, paint);
+
 			
 			/*
 			 * draw the arrow
 			 */
 			paint.setColor(Color.RED);
 			if(velocity>0)
-                upRedArrow(redArrow, arrowMargin, arrowSize, canvas);
+                upRedArrow(redArrow, arrowMargin, strokeWidth, arrowSize, canvas);
 			else if(velocity<0){
-				downRedArrow(redArrow, arrowMargin, arrowSize, canvas);
+				downRedArrow(redArrow, arrowMargin, strokeWidth, arrowSize, canvas);
 			}
 			if(acceleration>0){
-				upGreenArrow(greenArrow, arrowMargin, arrowSize, canvas);
+				upGreenArrow(greenArrow, SCREEN_WIDTH - arrowSize - arrowMargin, strokeWidth, arrowSize, canvas);
 			}
 			else if(acceleration<0){
-				downGreenArrow(greenArrow, arrowMargin, arrowSize, canvas);
+				downGreenArrow(greenArrow, SCREEN_WIDTH - arrowSize - arrowMargin, strokeWidth, arrowSize, canvas);
 			}
 			/*
 			 * compute the new position of our object, based on accelerometer
@@ -620,30 +628,30 @@ public class LevelOne extends Activity {
 				canvas.drawBitmap(bitmap, x, y, null);
 			}
 		}
-		private void upRedArrow(Bitmap arrow, float arrowMargin, int size, Canvas canvas){
+		private void upRedArrow(Bitmap arrow, float leftMargin, float topMargin, int size, Canvas canvas){
             //original arrow is down
             Matrix matrix = new Matrix();
             matrix.preRotate(180);
             arrow = Bitmap.createBitmap(arrow,0, 0, arrowSize, size, matrix, true);
-            canvas.drawBitmap(arrow,arrowMargin, 0, null);
+            canvas.drawBitmap(arrow,leftMargin, topMargin, null);
 			
 		}
-		private void downRedArrow(Bitmap arrow, float arrowMargin, int size, Canvas canvas){
+		private void downRedArrow(Bitmap arrow, float leftMargin, float topMargin, int size, Canvas canvas){
             //original arrow is down
-            canvas.drawBitmap(arrow, arrowMargin, 0, null);
+            canvas.drawBitmap(arrow, leftMargin, topMargin, null);
 		}
 
-        private void downGreenArrow(Bitmap arrow, float arrowMargin, int size, Canvas canvas){
+        private void downGreenArrow(Bitmap arrow, float rightMargin, float topMargin, int size, Canvas canvas){
             //original arrow is down
             Matrix matrix = new Matrix();
             matrix.preRotate(180);
-            arrow = Bitmap.createBitmap(arrow,0, 0, arrowSize, arrowSize, matrix, true);
-            canvas.drawBitmap(arrow,SCREEN_WIDTH - size - arrowMargin, 0, null);
+            arrow = Bitmap.createBitmap(arrow,0, 0, size, arrowSize, matrix, true);
+            canvas.drawBitmap(arrow, rightMargin, topMargin, null);
 
         }
-        private void upGreenArrow(Bitmap arrow, float arrowMargin, int size, Canvas canvas){
+        private void upGreenArrow(Bitmap arrow, float rightMargin, float topMargin, int size, Canvas canvas){
             //original arrow is up
-            canvas.drawBitmap(arrow, SCREEN_WIDTH - size - arrowMargin, 0, null);
+            canvas.drawBitmap(arrow, rightMargin,topMargin, null);
         }
 
 	}
